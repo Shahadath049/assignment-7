@@ -17,6 +17,7 @@ fetch("./texts.json")
   .then((data) => {
     questionText = data[Math.floor(Math.random() * data.length)];
     question.innerHTML = questionText;
+    
   });
 
 // checks the user typed character and displays accordingly
@@ -124,7 +125,7 @@ const start = () => {
 };
 
 // START Countdown
-startBtn.addEventListener("click", start);
+startBtn.addEventListener("click", start());
 
 // If history exists, show it
 displayHistory();
